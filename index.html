@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./File/Icon/hourglass.svg" />
+    <title>Countdown</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <style>
+    .item-day {
+      grid-area: day;
+    }
+    .item-hour {
+      grid-area: hour;
+    }
+    .item-minutes {
+      grid-area: minutes;
+    }
+    .item-second {
+      grid-area: second;
+    }
+    .item-day-text {
+      grid-area: day-text;
+    }
+    .item-hour-text {
+      grid-area: hour-text;
+    }
+    .item-minutes-text {
+      grid-area: minutes-text;
+    }
+    .item-second-text {
+      grid-area: second-text;
+    }
+    .item-day {
+      grid-area: item-day;
+    }
+    .item-hour {
+      grid-area: item-hour;
+    }
+    .item-minutes {
+      grid-area: item-minutes;
+    }
+    .item-second {
+      grid-area: item-second;
+    }
+    @font-face {
+      font-family: digital;
+      src: url(./File/Font/digital-7.ttf);
+    }
+    @font-face {
+      font-family: text;
+      src: url(./File/Font/OpenSans-Light.ttf);
+    }
+    @font-face {
+      font-family: uni;
+      src: url(./File/Font/Roboto-Light.ttfbak);
+    }
+    @font-face {
+      font-family: finish;
+      src: url(./File/Font/Black\ Angel\ Demo.ttf);
+    }
+    body {
+      /*background-color: black;*/
+      color: white;
+      text-transform: capitalize;
+      margin: 0;
+      background: url(./File/Background/Background-2.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .out {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-areas: "item-day item-hour item-minutes item-second";
+    }
+    .countdown div {
+      text-align: center;
+      width: 80px;
+    }
+    .time-number {
+      font-size: 50px;
+      font-family: digital;
+      margin: 0;
+    }
+    .time-text {
+      font-size: 15px;
+      font-family: uni;
+      margin: 0;
+    }
+    #finish {
+      font-size: 100px;
+      font-family: finish;
+    }
+  </style>
+
+  <body>
+    <div class="out">
+      <div class="countdown">
+        <span id="finish"></span>
+        <div class="day item-day" id="r-day">
+          <div class="time item-day-text" id="day-text"></div>
+          <div class="time" id="day"></div>
+        </div>
+        <div class="hour item-hour" id="r-hour">
+          <div class="time item-hour-text" id="hour-text"></div>
+          <div class="time" id="hour"></div>
+        </div>
+        <div class="minutes item-minutes" id="r-min">
+          <div class="time item-minutes-text" id="min-text"></div>
+          <div class="time" id="min"></div>
+        </div>
+        <div class="second item-second" id="r-sec">
+          <div class="time item-second-text" id="sec-text"></div>
+          <div class="time" id="sec"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./javascript.js"></script>
+</html>
