@@ -1,5 +1,5 @@
 const now = new Date().getTime();
-const end = new Date("february 24 2021 00:00").getTime();
+const end = new Date("march 21 2022 00:00").getTime();
 var timeDay = 0;
 var timeHour = 0;
 var timeMinuts = 0;
